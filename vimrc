@@ -14,6 +14,9 @@ set enc=utf-8
 " 4 spaces as indent size
 set shiftwidth=4 
 
+" Don't redraw while playing macro
+set nolazyredraw
+
 " Tabs count as 4 spaces
 set softtabstop=4 
 
