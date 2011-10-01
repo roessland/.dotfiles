@@ -1,43 +1,107 @@
 " Andreas Røssland <andreas.roessland@gmail.com> "
 """"""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible " Use Vim settings, not Vi settings. This must be first.
-" Syntax options
-syntax on " Enable syntax highlighting
-set enc=utf-8 " Encoding
-set shiftwidth=4 " 4 spaces as indent size
-set softtabstop=4 " Some weird tab thing
-set noexpandtab " We want tabs to be tabs, not spaces
-set number " Turn on line numbering
-set tabstop=4 " Tells vim tabs are four spaces wide
-set expandtab " Expand tabs into spaces
-" Visual options
-colorscheme desert256 " My favourite theme
+" git clone git://github.com/andross/vim.git     "
 
-" Fonts
+" Enable cool Vim-only settings
+set nocompatible 
+
+" Enable syntax highlighting
+syntax on 
+
+" Encoding
+set enc=utf-8 
+
+" 4 spaces as indent size
+set shiftwidth=4 
+
+" Tabs count as 4 spaces
+set softtabstop=4 
+
+" Turn on line numbering
+set number 
+
+" Tells vim tabs are four spaces wide
+set tabstop=4 
+
+" Expand tabs into spaces when typing them
+set expandtab
+
+" Scroll up/down when within 5 lines of top/bottom
+set scrolloff=5
+ 
+" If Gvim is running
+if has("gui_running")
+    " My favourite theme
+    colorscheme desert256 
+
+    " Remove toolbar
+    set guioptions-=T
+
+    " Faster updates
+    set ttyfast
+
+" If linux GUI
 if has("gui_gtk2")
+
+    " Linux font
 	set guifont=Liberation\ Mono\ 9
+endif
+
+" If Windows GUI
 elseif has("gui_win32")
+
+    " Windows font
 	set guifont=Consolas:h11
-else
-	set guifont=Consolas
 end
 
-highlight Normal ctermbg=236 guibg=#202020 "make background dark grey, not black
-" Search options
-set hls " Highlight on search
-set is " Instant search 
-set history=100 " Command line history
-" Misc options
-set showcmd " Display incomplete commands in corner
-if has('mouse')
-	set mouse=a " Enable mouse in terminal emulator
-endif
-set autochdir " Switch directory to current buffer
-"Indent options
-set autoindent
-set smartindent
-set backspace=indent,eol,start "Allow BS over indentation, newline and start of insert
+"make background dark grey, not black
+highlight Normal ctermbg=236 guibg=#202020 
 
-" Mappings
-map <F6> :!g++ %:!./a.out
-map <F7> :!./a.out<CR>
+" Incremental search
+set incsearch
+
+" Highlight on search highlights current matches while typing
+set hls 
+
+" Sow matching brace
+set showmatch
+
+" Instant search searches without pressing enter 
+set is 
+
+" Increase command line history
+set history=100 
+
+" Increase undo history
+set undolevels=1000
+
+" Display incomplete commands in corner
+set showcmd 
+
+" We have a
+
+" Enable mouse in terminal emulator
+if has('mouse')
+    set mouse=a 
+endif
+
+" Switch directory to current file on bufferchange
+set autochdir 
+
+" Automatically indents on newline after {
+set autoindent
+
+" Keeps current indentation level on newline
+set smartindent
+
+"Allow backspace over indentation, newline and start point of insert mode
+set backspace=indent,eol,start 
+
+" Indents automatically based on filetype
+if has("autocmd")
+    filetype plugin indent on
+endif
+
+" Better tab completion
+set wildmode=longest:full
+set wildmenu
