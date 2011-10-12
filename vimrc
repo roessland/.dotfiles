@@ -66,8 +66,10 @@ set incsearch
 " Highlight on search highlights current matches while typing
 set hls 
 
-" Sow matching brace
-set showmatch
+" Show matching brace
+if has("gui_running")
+    set showmatch " This option obscures view with my colorscheme
+endif
 
 " Instant search searches without pressing enter 
 set is 
@@ -94,9 +96,6 @@ set autochdir
 " Automatically indents on newline after {
 set autoindent
 
-" Keeps current indentation level on newline
-set smartindent
-
 "Allow backspace over indentation, newline and start point of insert mode
 set backspace=indent,eol,start 
 
@@ -106,5 +105,5 @@ if has("autocmd")
 endif
 
 " Better tab completion
-set wildmode=longest:full
 set wildmenu
+set wildmode=list:longest,full
