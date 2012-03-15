@@ -32,10 +32,11 @@ set expandtab
 " Scroll up/down when within 5 lines of top/bottom
 set scrolloff=5
  
+" My favourite theme
+colorscheme molokai
+
 " If Gvim is running
 if has("gui_running")
-    " My favourite theme
-    colorscheme desert256 
 
     " Remove toolbar
     set guioptions-=T
@@ -58,7 +59,7 @@ elseif has("gui_win32")
 end
 
 "make background dark grey, not black
-highlight Normal ctermbg=236 guibg=#202020 
+"highlight Normal ctermbg=236 guibg=#202020 
 
 " Incremental search
 set incsearch
