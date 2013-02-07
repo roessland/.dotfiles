@@ -2,6 +2,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " git clone git://github.com/andross/vim.git     "
 
+
 " Enable cool Vim-only settings
 set nocompatible 
 
@@ -13,9 +14,6 @@ set enc=utf-8
 
 " 4 spaces as indent size
 set shiftwidth=4 
-
-" Don't redraw while playing macro
-set nolazyredraw
 
 " Tabs count as 4 spaces
 set softtabstop=4 
@@ -100,11 +98,11 @@ set autoindent
 "Allow backspace over indentation, newline and start point of insert mode
 set backspace=indent,eol,start 
 
-" Indents automatically based on filetype
-if has("autocmd")
-    filetype plugin indent on
-endif
-
 " Better tab completion
 set wildmenu
 set wildmode=list:longest,full
+
+" Add Go syntax and plugins
+set rtp+=$GOROOT/misc/vim
+filetype off
+filetype plugin indent on
