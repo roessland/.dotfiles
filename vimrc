@@ -1,7 +1,5 @@
 " Andreas Røssland <andreas.roessland@gmail.com> "
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" git clone git://github.com/andross/vim.git     "
-
 
 " Enable cool Vim-only settings
 set nocompatible 
@@ -46,7 +44,7 @@ if has("gui_running")
 if has("gui_gtk2")
 
     " Linux font
-	set guifont=Liberation\ Mono\ 9
+	set guifont=Liberation\ Mono\ 11
 endif
 
 " If Windows GUI
