@@ -4,6 +4,9 @@
 " Enable cool Vim-only settings
 set nocompatible 
 
+" Enable 16 colors
+set t_Co=16
+
 " Enable syntax highlighting
 syntax on 
 
@@ -29,10 +32,13 @@ set expandtab
 set scrolloff=5
  
 " My favourite theme
-colorscheme molokai
+"colorscheme molokai
 
 " If Gvim is running
 if has("gui_running")
+
+    " My favourite theme
+    colorscheme molokai
 
     " Remove toolbar
     set guioptions-=T
@@ -104,3 +110,11 @@ set wildmode=list:longest,full
 set rtp+=$GOROOT/misc/vim
 filetype off
 filetype plugin indent on
+
+" Add better keys for tab navigation
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab> :tabnext<CR>
+nnoremap <C-t> :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab> <Esc>:tabprevious<CR>i
+inoremap <C-t> <Esc>:tabnew<CR>
