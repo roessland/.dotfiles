@@ -10,6 +10,9 @@ set t_Co=16
 " Enable syntax highlighting
 syntax on 
 
+" Show cursor position
+set ruler
+
 " Encoding
 set enc=utf-8 
 
@@ -118,3 +121,10 @@ nnoremap <C-t> :tabnew<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab> <Esc>:tabprevious<CR>i
 inoremap <C-t> <Esc>:tabnew<CR>
+
+" Enable folder-specific vimrc
+set exrc
+set secure
+
+" localvimrc, enable remembering which .lvimrc files are accepted
+let g:localvimrc_persistent=2
