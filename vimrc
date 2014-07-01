@@ -3,6 +3,23 @@
 
 " Enable cool Vim-only settings
 set nocompatible 
+filetype off " required for Vundle
+
+" Enable vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'editorconfig/editorconfig-vim'
+
+call vundle#end()
+filetype plugin indent on
+
+" CtrlP ignore folders
+let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+" CtrlP set root dir to .git (because of autochdir screws this up)
+let g:ctrlp_working_path_mode = 'ra'
+
 
 " Enable 16 colors
 set t_Co=16
@@ -121,6 +138,10 @@ nnoremap <C-t> :tabnew<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab> <Esc>:tabprevious<CR>i
 inoremap <C-t> <Esc>:tabnew<CR>
+
+" change leader key
+let mapleader = ","
+
 
 " Enable folder-specific vimrc
 set exrc
