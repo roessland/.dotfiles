@@ -131,7 +131,7 @@ set rtp+=$GOROOT/misc/vim
 filetype off
 filetype plugin indent on
 
-" Add better keys for tab navigation
+" Add Chrome/Firefox keys for tab navigation
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
@@ -141,6 +141,12 @@ inoremap <C-t> <Esc>:tabnew<CR>
 
 " change leader key
 let mapleader = ","
+map <Space> <Leader>
+
+" Add Leader hl for tab navigation (OSX doesn't like the Chrome keys)
+nmap <Leader>l :tabnext<CR>
+nmap <Leader>h :tabprevious<CR>
+
 
 
 " Enable folder-specific vimrc
