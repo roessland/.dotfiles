@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'flazz/vim-colorschemes'
 call vundle#end()
 filetype plugin indent on
 
@@ -20,9 +21,8 @@ let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules|target|dist)|(
 " CtrlP set root dir to .git (because of autochdir screws this up)
 let g:ctrlp_working_path_mode = 'ra'
 
-
-" Enable 16 colors
-set t_Co=16
+" Enable 256 colors
+set t_Co=256
 
 " Enable syntax highlighting
 syntax on 
@@ -52,13 +52,10 @@ set expandtab
 set scrolloff=5
  
 " My favourite theme
-"colorscheme molokai
+colorscheme molokai
 
 " If Gvim is running
 if has("gui_running")
-
-    " My favourite theme
-    colorscheme molokai
 
     " Remove toolbar
     set guioptions-=T
