@@ -13,6 +13,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-fugitive'
+"Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
 
@@ -129,6 +131,7 @@ filetype off
 filetype plugin indent on
 
 " Add Chrome/Firefox keys for tab navigation
+" Usually only works in Linux, not PuTTY or Terminal
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
