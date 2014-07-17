@@ -1,0 +1,7 @@
+[user]
+	email = andreas.roessland@gmail.com
+	name = Andreas Røssland
+[core]
+	editor = vim
+[push]
+	default = simple
