@@ -12,11 +12,11 @@ vim +BundleInstall +qall
 # Included, since parts of these files may be custom for each machine
 touch ~/.bashrc
 
-LINE=". ~/.dotfiles/bashrc_include.sh"
+LINE="source ~/.dotfiles/bashrc_include.sh"
 if ! grep -q "$LINE" ~/.bashrc ; then echo $LINE >> ~/.bashrc ; fi
 
-LINE=". ~/.dotfiles/bash_prompt.sh"
+LINE="source ~/.dotfiles/bash_prompt.sh"
 if ! grep -q "$LINE" ~/.bashrc ; then echo $LINE >> ~/.bashrc ; fi
 
-LINE=". ~/.dotfiles/alias.sh"
+LINE="source ~/.dotfiles/alias.sh"
 if ! grep -q "$LINE" ~/.bashrc ; then echo $LINE >> ~/.bashrc ; fi

@@ -139,6 +139,10 @@ inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab> <Esc>:tabprevious<CR>i
 inoremap <C-t> <Esc>:tabnew<CR>
 
+" Add tmux keys for window splitting
+nnoremap <C-w>" :sp<CR>
+nnoremap <C-w>% :vsp<CR>
+
 " change leader key
 let mapleader = ","
 map <Space> <Leader>
@@ -146,6 +150,8 @@ map <Space> <Leader>
 " Add Leader hl for tab navigation (OSX doesn't like the Chrome keys)
 nmap <Leader>l :tabnext<CR>
 nmap <Leader>h :tabprevious<CR>
+nmap <Leader>c :tabnew<CR>
+nmap <Leader>x :tabclose<CR>
 
 
 
