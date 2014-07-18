@@ -1,7 +1,14 @@
 [user]
-	email = andreas.roessland@gmail.com
 	name = Andreas Røssland
-[core]
-	editor = vim
+	email = andreas.rossland@silabs.com
 [push]
 	default = simple
+[color]
+	diff = true
+	ui = auto
+[core]
+	editor = /usr/bin/vim
+[alias]
+    st = status
+    co = checkout
+    cm = commit
