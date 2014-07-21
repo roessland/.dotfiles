@@ -28,32 +28,32 @@ let g:ctrlp_working_path_mode = 'ra'
 set t_Co=256
 
 " Enable syntax highlighting
-syntax on 
+syntax on
 
 " Show cursor position
 set ruler
 
 " Encoding
-set enc=utf-8 
+set enc=utf-8
 
 " 4 spaces as indent size
-set shiftwidth=4 
+set shiftwidth=4
 
 " Tabs count as 4 spaces
-set softtabstop=4 
+set softtabstop=4
 
 " Turn on line numbering
-set number 
+set number
 
 " Tells vim tabs are four spaces wide
-set tabstop=4 
+set tabstop=4
 
 " Expand tabs into spaces when typing them
 set expandtab
 
 " Scroll up/down when within 5 lines of top/bottom
 set scrolloff=5
- 
+
 " My favourite theme
 colorscheme molokai
 
@@ -81,24 +81,24 @@ elseif has("gui_win32")
 end
 
 "make background dark grey, not black
-"highlight Normal ctermbg=236 guibg=#202020 
+"highlight Normal ctermbg=236 guibg=#202020
 
 " Incremental search
 set incsearch
 
 " Highlight on search highlights current matches while typing
-set hls 
+set hls
 
 " Show matching brace
 if has("gui_running")
     set showmatch " This option obscures view with my colorscheme
 endif
 
-" Instant search searches without pressing enter 
-set is 
+" Instant search searches without pressing enter
+set is
 
 " Increase command line history
-set history=100 
+set history=100
 
 " Increase undo history
 set undolevels=1000
@@ -110,17 +110,17 @@ set showcmd
 
 " Enable mouse in terminal emulator
 if has('mouse')
-    set mouse=a 
+    set mouse=a
 endif
 
 " Switch directory to current file on bufferchange
-set autochdir 
+set autochdir
 
 " Automatically indents on newline after {
 set autoindent
 
 "Allow backspace over indentation, newline and start point of insert mode
-set backspace=indent,eol,start 
+set backspace=indent,eol,start
 
 " Better tab completion
 set wildmenu
@@ -162,3 +162,6 @@ set secure
 
 " localvimrc, enable remembering which .lvimrc files are accepted
 let g:localvimrc_persistent=2
+
+" Fast saving
+nmap <Leader>w :w<CR>
