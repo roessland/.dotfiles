@@ -14,6 +14,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ntpeters/vim-better-whitespace'
 "Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
