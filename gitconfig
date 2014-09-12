@@ -1,8 +1,6 @@
 [user]
 	name = Andreas Røssland
-	email = andreas.rossland@silabs.com
-[push]
-	default = simple
+	email = andreas.roessland@gmail.com
 [color]
 	diff = true
 	ui = auto
