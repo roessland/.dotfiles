@@ -15,6 +15,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
@@ -153,7 +154,8 @@ nmap <Leader>l :tabnext<CR>
 nmap <Leader>h :tabprevious<CR>
 nmap <Leader>c :tabnew<CR>
 nmap <Leader>x :tabclose<CR>
-
+nmap <Leader>r :source $MYVIMRC<CR> "Fast vimrc reload
+nmap <Leader>w :w<CR> "Fast saving
 
 
 " Enable folder-specific vimrc
@@ -163,5 +165,15 @@ set secure
 " localvimrc, enable remembering which .lvimrc files are accepted
 let g:localvimrc_persistent=2
 
-" Fast saving
-nmap <Leader>w :w<CR>
+
+"""""""""""""""""""""""""""""""""""
+" CUSTOM AUTOCMDS
+""""""""""""""""""""""""""""""""""
+augroup vimrcEx
+    autocmd!
+
+    autocmd BufReadPost *
+     \  if line("'\"") > 0 && line("'\"") <= line("$") |
+     \      exe "normal g`\"" |
+     \  endif
+augroup end
