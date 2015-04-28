@@ -6,6 +6,7 @@
 	ui = auto
 [core]
 	editor = /usr/bin/vim
+    pager = less -R
 [alias]
     st = status
     co = checkout
