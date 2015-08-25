@@ -16,6 +16,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'fatih/vim-go'
+Plugin 'terryma/vim-expand-region'
 "Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
@@ -132,30 +134,22 @@ set rtp+=$GOROOT/misc/vim
 filetype off
 filetype plugin indent on
 
-" Add Chrome/Firefox keys for tab navigation
-" Usually only works in Linux, not PuTTY or Terminal
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab> :tabnext<CR>
-nnoremap <C-t> :tabnew<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab> <Esc>:tabprevious<CR>i
-inoremap <C-t> <Esc>:tabnew<CR>
-
 " Add tmux keys for window splitting
 nnoremap <C-w>" :sp<CR>
 nnoremap <C-w>% :vsp<CR>
+" Autosave when leaving split
+let g:tmux_navigator_save_on_switch = 1
 
 " change leader key
-let mapleader = ","
-map <Space> <Leader>
+let mapleader = "\<Space>"
 
 " Add Leader hl for tab navigation (OSX doesn't like the Chrome keys)
 nmap <Leader>l :tabnext<CR>
 nmap <Leader>h :tabprevious<CR>
 nmap <Leader>c :tabnew<CR>
 nmap <Leader>x :tabclose<CR>
-nmap <Leader>r :source $MYVIMRC<CR> "Fast vimrc reload
-nmap <Leader>w :w<CR> "Fast saving
+nmap <Leader>r :source $MYVIMRC<CR>
+nmap <Leader>w :w<CR>
 
 
 " Enable folder-specific vimrc
@@ -177,3 +171,7 @@ augroup vimrcEx
      \      exe "normal g`\"" |
      \  endif
 augroup end
+
+" region expansion
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)

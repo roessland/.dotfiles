@@ -1,4 +1,4 @@
-# This script is designed to be idempotent, thus 
+# This script is designed to be idempotent, thus
 # running it multiple times is safe.
 
 # Same for every machine

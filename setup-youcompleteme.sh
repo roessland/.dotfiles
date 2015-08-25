@@ -1,1 +1,1 @@
-.vim/bundle/YouCompleteMe/install.sh --clang-completer
+vim/bundle/YouCompleteMe/install.sh --clang-completer
