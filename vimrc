@@ -155,6 +155,7 @@ set exrc
 set secure
 
 " localvimrc, enable remembering which .lvimrc files are accepted
+let g:localvimrc_sandbox=0
 let g:localvimrc_persistent=2
 
 
