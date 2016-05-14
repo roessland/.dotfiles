@@ -18,9 +18,11 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'fatih/vim-go'
 Plugin 'terryma/vim-expand-region'
+Plugin 'pangloss/vim-javascript'
 "Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " CtrlP ignore folders
 let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
