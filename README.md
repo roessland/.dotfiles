@@ -1,10 +1,10 @@
-Clone this repository to your home directory, and symlink dotfiles as needed.
+Clone this repository to your home directory. A new folder named `.dotfiles` will be created.
 
-Example:
+Enable everything by doing:
+
 ```
-cd
-git clone git@github.com:roessland/.dotfiles.git
-ln -s ~/.dotfiles/vim ~/.vim
-ln -s ~/.dotfiles/vimrc ~/.vimrc
-echo "source ~/.dotfiles/bash_prompt.sh" >> ~/.bashrc
+cd .dotfiles
+sh setup.sh
 ```
+
+And remember to change the name in gitconfig if you are not me.

@@ -2,7 +2,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
 " Enable cool Vim-only settings
-set nocompatible 
+set nocompatible
 filetype off " required for Vundle
 
 " Enable vundle
@@ -15,7 +15,6 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'fatih/vim-go'
 Plugin 'terryma/vim-expand-region'
 Plugin 'pangloss/vim-javascript'
@@ -159,6 +158,7 @@ set exrc
 set secure
 
 " localvimrc, enable remembering which .lvimrc files are accepted
+let g:localvimrc_sandbox=0
 let g:localvimrc_persistent=2
 
 
