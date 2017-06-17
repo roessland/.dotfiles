@@ -20,3 +20,6 @@ if ! grep -q "$LINE" ~/.bashrc ; then echo $LINE >> ~/.bashrc ; fi
 
 LINE="source ~/.dotfiles/alias.sh"
 if ! grep -q "$LINE" ~/.bashrc ; then echo $LINE >> ~/.bashrc ; fi
+
+# Reload bash with new settings
+exec bash
