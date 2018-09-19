@@ -168,6 +168,21 @@ let g:localvimrc_persistent=2
 " fix editorconfig startup time
 let g:EditorConfig_core_mode = 'python_external'
 
+"""""""""""""""""""""""""""""""""""
+" CUSTOM CMDS
+""""""""""""""""""""""""""""""""""
+
+" strip trailing whitespace
+function StripTrailingWhitespace()
+  if !&binary && &filetype != 'diff'
+    normal mz
+    normal Hmy
+    %s/\s\+$//e
+    normal 'yz<CR>
+    normal `z
+  endif
+endfunction
+nmap <Leader>s :call StripTrailingWhitespace()<CR>
 
 """""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
@@ -184,3 +199,4 @@ augroup end
 " region expansion
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
