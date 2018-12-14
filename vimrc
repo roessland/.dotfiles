@@ -32,6 +32,8 @@ let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules|target|dist)|(
 " CtrlP set root dir to .git (because of autochdir screws this up)
 let g:ctrlp_working_path_mode = 'ra'
 
+let g:go_fmt_command = "goimports"
+
 " Enable 256 colors
 set t_Co=256
 
