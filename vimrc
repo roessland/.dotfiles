@@ -137,9 +137,9 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Add Go syntax and plugins
-set rtp+=$GOROOT/misc/vim
-filetype off
-filetype plugin indent on
+"set rtp+=$GOROOT/misc/vim
+"filetype off
+"filetype plugin indent on
 
 " Add tmux keys for window splitting
 nnoremap <C-w>" :sp<CR>
@@ -170,6 +170,30 @@ let g:localvimrc_persistent=2
 " fix editorconfig startup time
 let g:EditorConfig_core_mode = 'python_external'
 
+" Pro netrw setup
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+nmap <F2> :Vexplore<CR>
+
+
+"""""""""""""""""""""""""""""""""""
+" CUSTOM CMDS
+""""""""""""""""""""""""""""""""""
+
+" strip trailing whitespace
+function StripTrailingWhitespace()
+  if !&binary && &filetype != 'diff'
+    normal mz
+    normal Hmy
+    %s/\s\+$//e
+    normal 'yz<CR>
+    normal `z
+  endif
+endfunction
+nmap <Leader>s :call StripTrailingWhitespace()<CR>
 
 """""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
@@ -186,3 +210,5 @@ augroup end
 " region expansion
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+
