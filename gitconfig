@@ -1,24 +1,11 @@
-[user]
-	name = Andreas Røssland
-	email = andreas.roessland@gmail.com
-[color]
-	diff = true
-	ui = auto
 [core]
 	editor = /usr/bin/vim
-    pager = less -R
-	filemode = false
-	autocrlf = false
+
 [alias]
-    st = status
-    co = checkout
-    cm = commit
+   	st = status
+	br = branch
+	co = checkout
+	cm = commit
+
 [push]
-	default = simple
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+	autoSetupRemote = true

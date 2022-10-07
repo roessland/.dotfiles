@@ -9,16 +9,12 @@ filetype off " required for Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'flazz/vim-colorschemes'
-" Plugin 'tpope/vim-fugitive' " Removed because of slow startup
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'fatih/vim-go'
 Plugin 'terryma/vim-expand-region'
 Plugin 'pangloss/vim-javascript'
-"Plugin 'bling/vim-airline'
 call vundle#end()
 filetype plugin indent on
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2

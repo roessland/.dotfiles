@@ -1,0 +1,5 @@
+# fzf fuzzy dir change fix for macos. option C doesn't work since it becomes ç. So just map that instead!
+# can also use Esc+c.
+bindkey "ç" fzf-cd-widget
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_ALT_C_COMMAND='fd --type d'
