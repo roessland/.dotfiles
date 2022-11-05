@@ -164,7 +164,7 @@ let g:localvimrc_sandbox=0
 let g:localvimrc_persistent=2
 
 " fix editorconfig startup time
-let g:EditorConfig_core_mode = 'python_external'
+"let g:EditorConfig_core_mode = 'python_external'
 
 " Pro netrw setup
 let g:netrw_banner = 0
