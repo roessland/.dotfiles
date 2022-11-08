@@ -6,6 +6,8 @@
 	br = branch
 	co = checkout
 	cm = commit
+    di = diff
+    dc = diff --cached
 
 [push]
 	autoSetupRemote = true
