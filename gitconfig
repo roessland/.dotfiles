@@ -8,6 +8,7 @@
 	cm = commit
     di = diff
     dc = diff --cached
+    l = log --stat
 
 [push]
 	autoSetupRemote = true
