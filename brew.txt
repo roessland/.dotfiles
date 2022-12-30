@@ -1,1 +1,1 @@
-brew install reattach-to-user-namespace tmux htop-osx git-flow ack sl wget vim cmatrix reattach-to-user-namespace
+brew install reattach-to-user-namespace tmux htop-osx git-flow ack sl wget vim cmatrix reattach-to-user-namespace ripgrep coreutils fd go tree git yamllint watch

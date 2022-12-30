@@ -11,6 +11,7 @@ ln -s ~/.dotfiles/ignore ~/.ignore # for fd, rg, ag
 ln -s ~/.dotfiles/ignore ~/.fdignore # for fd
 #ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 git clone http://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+echo "Error from Vundle can be ignored"
 vim +BundleInstall +qall
 
 touch ~/.gitconfig

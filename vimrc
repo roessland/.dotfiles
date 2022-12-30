@@ -15,6 +15,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'fatih/vim-go'
 Plugin 'terryma/vim-expand-region'
 Plugin 'pangloss/vim-javascript'
+Plugin 'morhetz/gruvbox'
 call vundle#end()
 filetype plugin indent on
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -61,7 +62,7 @@ set expandtab
 set scrolloff=5
 
 " My favourite theme
-colorscheme molokai
+colorscheme gruvbox
 
 " Faster updates
 set ttyfast
