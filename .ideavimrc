@@ -1,0 +1,31 @@
+" which-key, like lazy-vim
+set which-key
+set notimeout
+
+set ignorecase                    " ignore case in search patterns
+set smartcase                     " no ignore case when pattern is uppercase
+set incsearch                     " show search results while typing
+set wrapscan                      " searches wrap around the end of the file
+set gdefault                      " substitute all occurrences in line per default
+set scrolloff=5 sidescrolloff=10  " keep some lines before and after the cursor visible
+set clipboard=unnamedplus,unnamed,ideaput " integrate with system clipboard
+
+" leader is space
+let mapleader = " "
+
+" edit ideavim config
+nnoremap <leader>vv :e ~/.ideavimrc<CR>
+nnoremap <leader>vr :source ~/.ideavimrc<CR>
+let g:WhichKeyDesc_windows = "<leader>w  Windows"
+let g:WhichKey_ShowVimActions = "true" " show all vim actions
+
+" mimic lazy-vim
+nnoremap <leader>q :q<CR>
+nnoremap <leader>w <c-w>
+nnoremap <c-s> :w<CR>
+
+" don't lose selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+vnoremap = =gv
+

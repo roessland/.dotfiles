@@ -5,6 +5,6 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_ALT_C_COMMAND='fd --type d'
 
 gch() {
-	arg="$(git for-each-ref --format='%(refname:short)' | fzf --print0)"
+	arg="$(git for-each-ref --format='%(refname:short)' --sort=-committerdate refs/heads | fzf --print0)"
 	git checkout "$arg$"
 }
