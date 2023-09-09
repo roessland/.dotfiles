@@ -8,3 +8,6 @@ gch() {
 	arg="$(git for-each-ref --format='%(refname:short)' --sort=-committerdate refs/heads | fzf --print0)"
 	git checkout "$arg$"
 }
+
+
+export PATH="$HOME/go/bin:$PATH"
