@@ -1,1 +1,4 @@
-brew install reattach-to-user-namespace tmux htop-osx git-flow ack sl wget vim cmatrix reattach-to-user-namespace ripgrep coreutils fd go tree git yamllint watch
+brew install reattach-to-user-namespace tmux htop-osx git-flow ack sl wget vim cmatrix reattach-to-user-namespace ripgrep coreutils fd go tree git yamllint watch nvim yamllint rename python3 imagemagick fswatch
+
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-mono-nerd-font

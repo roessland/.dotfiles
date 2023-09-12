@@ -160,7 +160,10 @@ nmap <Leader>h :tabprevious<CR>
 nmap <Leader>c :tabnew<CR>
 nmap <Leader>x :tabclose<CR>
 nmap <Leader>r :source $MYVIMRC<CR>
+" save
 nmap <Leader>w :w<CR>
+"quit
+nmap <Leader>q :q<CR>
 
 
 " Enable folder-specific vimrc
