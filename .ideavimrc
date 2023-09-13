@@ -1,7 +1,12 @@
+" leader is space
+nnoremap <SPACE> <Nop> "unbind default space actions
+let mapleader = " "
+
 " which-key, like lazy-vim
 set which-key
 set notimeout
 
+" vim basics
 set ignorecase                    " ignore case in search patterns
 set smartcase                     " no ignore case when pattern is uppercase
 set incsearch                     " show search results while typing
@@ -10,22 +15,35 @@ set gdefault                      " substitute all occurrences in line per defau
 set scrolloff=5 sidescrolloff=10  " keep some lines before and after the cursor visible
 set clipboard=unnamedplus,unnamed,ideaput " integrate with system clipboard
 
-" leader is space
-let mapleader = " "
+" file explorer
+set NERDTree
+
 
 " edit ideavim config
 nnoremap <leader>vv :e ~/.ideavimrc<CR>
 nnoremap <leader>vr :source ~/.ideavimrc<CR>
 let g:WhichKeyDesc_windows = "<leader>w  Windows"
+let g:WhichKeyDesc_debug = "<leader>d  Debug"
 let g:WhichKey_ShowVimActions = "true" " show all vim actions
 
 " mimic lazy-vim
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w <c-w>
 nnoremap <c-s> :w<CR>
+nnoremap <leader>dl :action Rerun<CR>
+nmap <leader>e :action ActivateProjectToolWindow<CR>
+map <C-n> :NERDTree<CR>
+
+" Quick window navigation
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+
+
 
 " don't lose selection when indenting
-vnoremap < <gv
+nd default space actionsvnoremap < <gv
 vnoremap > >gv
 vnoremap = =gv
 

@@ -4,6 +4,7 @@
 # Same for every machine
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/vim ~/.vim
+ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 mkdir -p ~/.config/fd/
 ln -s ~/.dotfiles/ignore ~/.config/fd/ignore # for fd
