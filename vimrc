@@ -3,6 +3,12 @@
 
 " Enable cool Vim-only settings
 set nocompatible
+
+" 256 colors
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 filetype off " required for Vundle
 
 " Enable vundle
@@ -16,6 +22,7 @@ Plugin 'fatih/vim-go'
 Plugin 'terryma/vim-expand-region'
 Plugin 'pangloss/vim-javascript'
 Plugin 'morhetz/gruvbox'
+Plugin 'catppuccin/vim'
 call vundle#end()
 filetype plugin indent on
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
@@ -62,7 +69,7 @@ set expandtab
 set scrolloff=5
 
 " My favourite theme
-colorscheme gruvbox
+colorscheme catppuccin_frappe
 
 " Faster updates
 set ttyfast
