@@ -41,9 +41,8 @@ map <C-L> <C-W>l
 map <C-H> <C-W>h
 
 
-
 " don't lose selection when indenting
-nd default space actionsvnoremap < <gv
+vnoremap < <gv
 vnoremap > >gv
 vnoremap = =gv
 
