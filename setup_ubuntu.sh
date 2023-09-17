@@ -2,13 +2,14 @@
 # running it multiple times is safe.
 
 # Same for every machine
-ln -s ~/.dotfiles/vimrc ~/.vimrc
-ln -s ~/.dotfiles/vim ~/.vim
-ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/taskrc ~/.taskrc
-git clone http://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+ln -sn $HOME/dotfiles/vimrc $HOME/.vimrc
+ln -sn $HOME/dotfiles/vim/ $HOME/vim
+ln -sn $HOME/dotfiles/tmux.conf $HOME/tmux.conf
+ln -sn $HOME/dotfiles/gitconfig $HOME/gitconfig
+ln -sn $HOME/dotfiles/taskrc $HOME/taskrc
+git clone http://github.com/gmarik/Vundle.vim.git $HOME/vim/bundle/Vundle.vim
 vim +BundleInstall +qall
+echo "Fatal Vundle error can be ignored :)"
 
 # Included, since parts of these files may be custom for each machine
 touch ~/.bashrc
