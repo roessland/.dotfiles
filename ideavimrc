@@ -13,11 +13,9 @@ set incsearch                     " show search results while typing
 set wrapscan                      " searches wrap around the end of the file
 set gdefault                      " substitute all occurrences in line per default
 set scrolloff=5 sidescrolloff=10  " keep some lines before and after the cursor visible
-set clipboard=unnamedplus,unnamed,ideaput " integrate with system clipboard
 
 " file explorer
 set NERDTree
-
 
 " edit ideavim config
 nnoremap <leader>vv :e ~/.ideavimrc<CR>
