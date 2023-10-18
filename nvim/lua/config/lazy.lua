@@ -17,6 +17,12 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
     { "neovim/nvim-lspconfig", opts = { inlay_hints = { enabled = true } } },
+    {
+      "stevearc/conform.nvim",
+      opts = {
+        formatters_by_ft = {}, -- todo postgres and sqlfmt
+      },
+    },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },

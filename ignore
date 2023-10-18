@@ -1,3 +1,5 @@
 go/pkg/mod/*
 Library/Caches/*
 opt/anaconda3
+Library/Containers
+Library/Application Support
