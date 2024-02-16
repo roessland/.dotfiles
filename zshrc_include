@@ -1,13 +1,36 @@
-# fzf fuzzy dir change fix for macos. option C doesn't work since it becomes ç. So just map that instead!
-# can also use Esc+c.
-bindkey "ç" fzf-cd-widget
-export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_ALT_C_COMMAND='fd --type d'
 
+
+
+# Zsh plugin configuration
+
+
+## git
+
+### Checkout branch for review without having to fetch first.
+### Overrides the git plugin's alias.
+alias 'gfo'='git fetch && git checkout $1'
+
+### Fancy branch-picker
 gch() {
 	arg="$(git for-each-ref --format='%(refname:short)' --sort=-committerdate refs/heads | fzf --print0)"
 	git checkout "$arg$"
 }
 
+## alias-finder
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+
+## fzf
+
+### fzf fuzzy dir change fix for macos. option C doesn't work since it becomes ç. So just map that instead!
+### can also use Esc+c.
+bindkey "ç" fzf-cd-widget
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_ALT_C_COMMAND='fd --type d'
+
+
+# Standard path includes
 
 export PATH="$HOME/go/bin:$PATH"
+
+
+

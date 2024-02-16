@@ -1,0 +1,3 @@
+[submodule "oh-my-zsh-custom/plugins/alias-tips"]
+	path = oh-my-zsh-custom/plugins/alias-tips
+	url = https://github.com/djui/alias-tips

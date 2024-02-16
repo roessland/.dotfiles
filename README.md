@@ -8,3 +8,11 @@ sh setup.sh
 ```
 
 And remember to change the name in gitconfig if you are not me.
+
+# zshrc manual stuff
+zshrc isn't included. Here's some stuff it should have:
+
+```
+ZSH_CUSTOM=$HOME/.dotfiles/oh-my-zsh-custom
+```
+

@@ -16,10 +16,13 @@ git clone http://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo "Error from Vundle can be ignored"
 vim +BundleInstall +qall
 
+# git
 touch ~/.gitconfig
 LINE="[include]\n\tpath = .dotfiles/gitconfig"
 if ! rg -q --multiline '\[include\]\n\s+path = \.dotfiles/gitconfig' ~/.gitconfig ; then echo $LINE >> ~/.gitconfig ; fi
 
+# zsh
+ln -sn ~/.dotfiles/oh-my-zsh-custom ~/.oh-my-zsh/custom
 LINE="source ~/.dotfiles/zshrc_include"
 if ! grep -q "$LINE" ~/.zshrc ; then echo $LINE >> ~/.zshrc ; fi
 
