@@ -1,0 +1,6 @@
+[user]
+	name = Andreas Røssland
+	email = #TODO
+
+[include]
+	path = .dotfiles/gitconfig_include
