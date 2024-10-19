@@ -8,4 +8,5 @@ plugins (
   fzf
   alias-finder
   nvm
+  z
 )
