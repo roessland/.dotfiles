@@ -1,5 +1,6 @@
 " leader is space
-nnoremap <SPACE> <Nop> "unbind default space actions
+"unbind default space actions
+nnoremap <SPACE> <Nop>
 let mapleader = " "
 
 " which-key, like lazy-vim
