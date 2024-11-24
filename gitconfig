@@ -1,5 +1,6 @@
 [core]
 	editor = /usr/bin/vim
+    core.excludesFile = ~/.dotfiles/gitignore_global
 
 [alias]
    	st = status
@@ -12,3 +13,4 @@
 
 [push]
 	autoSetupRemote = true
+
