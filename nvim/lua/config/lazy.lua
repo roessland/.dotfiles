@@ -15,7 +15,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.go" },
     { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.coding.copilot" },
     { "neovim/nvim-lspconfig", opts = { inlay_hints = { enabled = true } } },
     {
       "stevearc/conform.nvim",
