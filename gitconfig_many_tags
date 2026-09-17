@@ -1,0 +1,7 @@
+# Include per remote URL from ~/.gitconfig:
+#   [includeIf "hasconfig:remote.*.url:git@github.com:ORG/**"]
+#       path = .dotfiles/gitconfig_many_tags
+# With ~12k tags, fetch is ~0.55s faster (~0.1s with SSH reuse). Local tags do not slow it.
+# Clone with --no-tags. Get tags: git fetch origin 'refs/tags/*:refs/tags/*'
+[remote "origin"]
+	tagOpt = --no-tags

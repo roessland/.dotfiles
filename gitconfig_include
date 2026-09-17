@@ -56,7 +56,7 @@
         followTags = true
 [fetch]
         prune = true
-        pruneTags = true
+        # No pruneTags: it overrides tagOpt --no-tags and deletes local-only tags.
         all = true
 
 # why the hell not?

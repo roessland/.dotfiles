@@ -22,6 +22,9 @@ LINE="[include]\n\tpath = .dotfiles/gitconfig"
 if ! rg -q --multiline '\[include\]\n\s+path = \.dotfiles/gitconfig' ~/.gitconfig ; then echo $LINE >> ~/.gitconfig ; fi
 git config --global core.excludesFile ~/.dotfiles/gitignore_global
 
+# ssh
+bash ~/.dotfiles/ssh/install.sh
+
 # zsh
 ln -sn ~/.dotfiles/oh-my-zsh-custom ~/.oh-my-zsh/custom
 LINE="source ~/.dotfiles/zshrc_include"
